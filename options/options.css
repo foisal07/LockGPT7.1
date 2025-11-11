@@ -1,0 +1,121 @@
+:root {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+  --options-bg: #f0f4f9;
+  --options-text: #0f172a;
+  --options-muted-text: rgba(15, 23, 42, 0.72);
+  --options-card-bg: #ffffff;
+  --options-card-border: rgba(15, 23, 42, 0.08);
+  --options-card-shadow: 0 25px 60px rgba(15, 23, 42, 0.13);
+  --options-field-border: rgba(15, 23, 42, 0.12);
+  --options-field-bg: rgba(15, 23, 42, 0.04);
+  --options-input-text: #0f172a;
+  --options-button-gradient-start: #10a37f;
+  --options-button-gradient-end: #2780ff;
+  --options-button-text: #ffffff;
+  --options-status-text: rgba(15, 23, 42, 0.7);
+  --options-error-text: #b42318;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --options-bg: #0d0d0f;
+    --options-text: #ececed;
+    --options-muted-text: rgba(236, 236, 237, 0.8);
+    --options-card-bg: rgba(255, 255, 255, 0.04);
+    --options-card-border: rgba(255, 255, 255, 0.08);
+    --options-card-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    --options-field-border: rgba(255, 255, 255, 0.12);
+    --options-field-bg: rgba(255, 255, 255, 0.05);
+    --options-input-text: #ffffff;
+    --options-status-text: rgba(255, 255, 255, 0.8);
+    --options-error-text: #ff8080;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--options-bg);
+  color: var(--options-text);
+}
+
+.card {
+  width: min(420px, 90vw);
+  background: var(--options-card-bg);
+  border: 1px solid var(--options-card-border);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--options-card-shadow);
+}
+
+.card h1 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0 0 24px;
+  color: var(--options-muted-text);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field input {
+  border-radius: 12px;
+  border: 1px solid var(--options-field-border);
+  background: var(--options-field-bg);
+  color: var(--options-input-text);
+  padding: 12px 14px;
+  font-size: 1rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+button.primary {
+  flex: 1;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--options-button-gradient-start),
+    var(--options-button-gradient-end)
+  );
+  color: var(--options-button-text);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button.primary:disabled {
+  opacity: 0.65;
+  cursor: progress;
+}
+
+.status {
+  font-size: 0.9rem;
+  color: var(--options-status-text);
+}
+
+.error {
+  color: var(--options-error-text);
+}

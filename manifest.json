@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "LockGPT - Lock ChatGPT Chats",
+  "description": "PIN-protected ChatGPT chats and marks them as private.",
+  "version": "1.0.0",
+  "options_page": "options/options.html",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://chat.openai.com/*",
+    "https://chatgpt.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "LockGPT - Lock ChatGPT Chats"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "shared/crypto.js",
+        "vendor/react.production.min.js",
+        "vendor/react-dom.production.min.js",
+        "contentScript.js"
+      ],
+      "css": [
+        "styles/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
