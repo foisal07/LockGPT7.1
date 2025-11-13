@@ -170,13 +170,13 @@
     return e(
       "main",
       { className: "card" },
-      e("h1", null, "Secure Chat PIN"),
+      e("h1", null, "Set a PIN to lock ChatGPT chats"),
       e(
         "p",
         null,
         storedPinKey
           ? "Update your lock PIN anytime. This never leaves your device."
-          : "Set a lock PIN to protect private ChatGPT conversations."
+          : "You will use this PIN to unlock ChatGPT chats."
       ),
       e(
         "form",
