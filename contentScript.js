@@ -965,7 +965,16 @@
                         disabled: status === "busy",
                         onClick: () => handleUnlockChat(conversationId),
                       },
-                      e("span", null, displayTitle)
+                      e(
+                        "span",
+                        { className: "chatgpt-lock-folder__item-title" },
+                        displayTitle
+                      ),
+                      e(
+                        "span",
+                        { className: "chatgpt-lock-folder__unlock-label" },
+                        "Unlock"
+                      )
                     )
                   );
                 })
