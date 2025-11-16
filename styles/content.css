@@ -96,8 +96,8 @@ body.light {
   padding: 0 14px;
   height: 36px;
   border-radius: 999px;
-  border: 1px solid var(--chatgpt-lock-border-soft);
-  background: var(--chatgpt-lock-surface);
+  border: 1px solid transparent;
+  background: transparent;
   color: var(--chatgpt-lock-text-primary);
   font-size: 0.9rem;
   font-weight: 600;
@@ -111,13 +111,13 @@ body.light {
 }
 
 .chatgpt-lock-button:not(:disabled):hover {
-  background: var(--chatgpt-lock-success-surface);
-  border-color: var(--chatgpt-lock-success-border-strong);
+  background: var(--chatgpt-lock-surface-alt);
+  border-color: var(--chatgpt-lock-border-soft);
 }
 
 .chatgpt-lock-icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   fill: currentColor;
 }
 

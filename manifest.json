@@ -15,8 +15,18 @@
   "background": {
     "service_worker": "background.js"
   },
+  "icons": {
+    "16": "lockgpt_icon.png",
+    "32": "lockgpt_icon.png",
+    "48": "lockgpt_icon.png",
+    "128": "lockgpt_icon.png"
+  },
   "action": {
-    "default_title": "LockGPT - Lock ChatGPT Chats"
+    "default_title": "LockGPT - Lock ChatGPT Chats",
+    "default_icon": {
+      "16": "lockgpt_icon.png",
+      "32": "lockgpt_icon.png"
+    }
   },
   "content_scripts": [
     {
